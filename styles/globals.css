@@ -1,0 +1,369 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+
+
+
+@font-face {
+  font-family: 'pushpenny';
+  src: url('/fonts/PushPenny-Book.ttf');
+}
+@font-face {
+  font-family: 'pushpenny-bold';
+  src: url('/fonts/PushPenny-Bold.ttf');
+}
+@font-face {
+  font-family: 'pushpenny-light';
+  src: url('/fonts/PushPenny-Light.ttf');
+}
+@font-face {
+  font-family: 'pushpenny-medium';
+  src: url('/fonts/PushPenny-Medium.ttf');
+}
+@font-face {
+  font-family: 'pushpenny-xbold';
+  src: url('/fonts/PushPenny-ExtraBold.ttf');
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+.mid-section-first:hover #child-two {
+  margin-left: 15px;
+  transition: 0.5s linear;
+}
+
+.mid-section-first:hover #child-one, .mid-mobile:hover #first {
+  background-image: url('/images/mid-section/rectangle15.svg');
+}
+
+.mid-section-first:not(:hover) #child-two {
+  margin-left: -260px;
+  transition: 0.5s linear;
+}
+
+#child-two{
+  margin-left: -260px;
+}
+
+/* #mid-section-image-three #child-two{
+  margin-left: -264px;
+} */
+
+#pos-hovered {
+  margin-top: -70px;
+  margin-left: 150px;
+  display: none;
+}
+
+#pos:hover {
+  display: none;
+}
+
+#pos-hovered-mobile {
+  margin-top: -40px;  
+  margin-left: 50px;
+  display: none;  
+}
+
+#girl-hovered {
+  margin-top: -125px;
+  margin-left: 120px;
+  display: none;
+}
+
+#phone-hovered {
+  margin-top: -140px;
+  margin-left: 100px;
+  display: none;
+}
+
+#simplifying {
+  margin-left: 25px;
+  margin-top: 15px;
+  display: none;
+}
+
+
+
+#girl-hovered-mobile {
+  margin-top: -80px;
+  display: none;
+}
+
+#simplifying-mobile {
+  margin-top: -70px;
+  margin-left: 2px;
+  display: none;
+}
+
+#accelerating-mobile {
+  display: none;  
+}
+
+#accelerating-hovered-mobile {
+  margin-top: -90px;
+  margin-left: 40px;
+  display: none;
+}
+
+#agency-banking {
+  margin: auto;
+  margin-top: 120px;
+  display: none;
+}
+
+#accelerating {
+  margin: auto;
+  margin-top: 40px;
+  display: none;
+}
+
+
+
+.mid-mobile #child-two{
+  /* border: 1px solid black; */
+  
+}
+.mid-mobile:hover .text-hide {
+  display:none;
+}
+
+.mid-mobile:not(:hover) .text-hide {
+  display: flex;
+}
+
+
+.mid-section-first:hover #pos-hovered,
+.mid-mobile:hover #pos-hovered-mobile,
+.mid-mobile:hover #girl-hovered-mobile,
+.mid-mobile:hover #simplifying-mobile,
+.mid-mobile:hover #display-detail,
+.mid-mobile:hover #accelerating-hovered-mobile,
+.mid-mobile:hover #accelerating-mobile,
+.mid-section-first:hover #agency-banking,
+.mid-mobile:hover #agency-banking,
+.mid-section-first:hover #girl-hovered,
+.mid-section-first:hover #simplifying,
+.mid-section-first:hover #phone-hovered, 
+.mid-section-first:hover #accelerating {
+  display: inherit;
+}
+
+#mid-image-two {
+  margin-top: 240px;
+}
+#mid-image-three {
+  margin-top: 150px;
+}
+
+#mid-section-image-two {
+  margin-left: 40px;
+}
+#mid-section-image-three {
+  margin-left: 40px;
+}
+
+.business-subject {
+  cursor: pointer;
+  transition: 1s linear;
+}
+
+/* .business-subject .text-marker svg {
+  fill: black;
+  fill-opacity: 0.25;
+} */
+
+/* .business-subject:hover .business-sub, .business-subject:hover .text-marker svg {
+  color: #F9B40B;
+  fill: #F9B40B;
+  fill-opacity: 1;
+} */
+
+
+.business-subject:hover .business-description {
+  display: flex;
+}
+
+.text-marker img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+/* Animation */
+
+
+.cell {
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid white; */
+  z-index: 2;
+}
+.cell:nth-child(20n + 1):hover ~ .content {
+  --positionX: 0;
+}
+.cell:nth-child(n + 1):nth-child(-n + 20):hover ~ .content {
+  --positionY: 0;
+}
+.cell:nth-child(20n + 2):hover ~ .content {
+  --positionX: 1;
+}
+.cell:nth-child(n + 21):nth-child(-n + 40):hover ~ .content {
+  --positionY: 1;
+}
+.cell:nth-child(20n + 3):hover ~ .content {
+  --positionX: 2;
+}
+.cell:nth-child(n + 41):nth-child(-n + 60):hover ~ .content {
+  --positionY: 2;
+}
+.cell:nth-child(20n + 4):hover ~ .content {
+  --positionX: 3;
+}
+.cell:nth-child(n + 61):nth-child(-n + 80):hover ~ .content {
+  --positionY: 3;
+}
+.cell:nth-child(20n + 5):hover ~ .content {
+  --positionX: 4;
+}
+.cell:nth-child(n + 81):nth-child(-n + 100):hover ~ .content {
+  --positionY: 4;
+}
+.cell:nth-child(20n + 6):hover ~ .content {
+  --positionX: 5;
+}
+.cell:nth-child(n + 101):nth-child(-n + 120):hover ~ .content {
+  --positionY: 5;
+}
+.cell:nth-child(20n + 7):hover ~ .content {
+  --positionX: 6;
+}
+.cell:nth-child(n + 121):nth-child(-n + 140):hover ~ .content {
+  --positionY: 6;
+}
+.cell:nth-child(20n + 8):hover ~ .content {
+  --positionX: 7;
+}
+.cell:nth-child(n + 141):nth-child(-n + 160):hover ~ .content {
+  --positionY: 7;
+}
+.cell:nth-child(20n + 9):hover ~ .content {
+  --positionX: 8;
+}
+.cell:nth-child(n + 161):nth-child(-n + 180):hover ~ .content {
+  --positionY: 8;
+}
+.cell:nth-child(20n + 10):hover ~ .content {
+  --positionX: 9;
+}
+.cell:nth-child(n + 181):nth-child(-n + 200):hover ~ .content {
+  --positionY: 9;
+}
+.cell:nth-child(20n + 11):hover ~ .content {
+  --positionX: 10;
+}
+.cell:nth-child(n + 201):nth-child(-n + 220):hover ~ .content {
+  --positionY: 10;
+}
+.cell:nth-child(20n + 12):hover ~ .content {
+  --positionX: 11;
+}
+.cell:nth-child(n + 221):nth-child(-n + 240):hover ~ .content {
+  --positionY: 11;
+}
+.cell:nth-child(20n + 13):hover ~ .content {
+  --positionX: 12;
+}
+.cell:nth-child(n + 241):nth-child(-n + 260):hover ~ .content {
+  --positionY: 12;
+}
+.cell:nth-child(20n + 14):hover ~ .content {
+  --positionX: 13;
+}
+.cell:nth-child(n + 261):nth-child(-n + 280):hover ~ .content {
+  --positionY: 13;
+}
+.cell:nth-child(20n + 15):hover ~ .content {
+  --positionX: 14;
+}
+.cell:nth-child(n + 281):nth-child(-n + 300):hover ~ .content {
+  --positionY: 14;
+}
+.cell:nth-child(20n + 16):hover ~ .content {
+  --positionX: 15;
+}
+.cell:nth-child(n + 301):nth-child(-n + 320):hover ~ .content {
+  --positionY: 15;
+}
+.cell:nth-child(20n + 17):hover ~ .content {
+  --positionX: 16;
+}
+.cell:nth-child(n + 321):nth-child(-n + 340):hover ~ .content {
+  --positionY: 16;
+}
+.cell:nth-child(20n + 18):hover ~ .content {
+  --positionX: 17;
+}
+.cell:nth-child(n + 341):nth-child(-n + 360):hover ~ .content {
+  --positionY: 17;
+}
+.cell:nth-child(20n + 19):hover ~ .content {
+  --positionX: 18;
+}
+.cell:nth-child(n + 361):nth-child(-n + 380):hover ~ .content {
+  --positionY: 18;
+}
+.cell:nth-child(20n + 20):hover ~ .content {
+  --positionX: 19;
+}
+.cell:nth-child(n + 381):nth-child(-n + 400):hover ~ .content {
+  --positionY: 19;
+}
+.content {
+  --positionX: 10;
+  --positionY: 10;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.follower {
+  position: absolute;
+  width: 95%;
+  height: 95%;
+  background-image: radial-gradient(#000 0, #000 7);
+}
+.follower:nth-child(1) {
+  top: calc( var(--positionY) * 0.2%);
+  left: calc(var(--positionX) * 0.2%);
+  background-color: #ef8f8f;
+  /* animation-duration: 1s; */
+  transition: all 0.1s;
+}
+
+#holder {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template: repeat(20, 1fr) / repeat(20, 1fr);
+  overflow: hidden;
+}
+
